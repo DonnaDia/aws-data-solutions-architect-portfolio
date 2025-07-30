@@ -1,8 +1,11 @@
 🧠 Case 1: Daily Sales Ingestion and Reporting
 
 📌 Scenario
+
 A retail company collects daily sales data from multiple small shops.
+
 Each shop uploads a structured `.csv` file once per day.
+
 The company needs a **serverless**, **scalable**, and **low-cost** solution to:
 
 - Ingest and store raw files
