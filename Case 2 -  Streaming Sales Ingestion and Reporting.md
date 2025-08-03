@@ -1,23 +1,24 @@
-🧠 Case 2: Streaming Daily Sales Ingestion and Reporting
+**🧠 Case 2: Streaming Daily Sales Ingestion and Reporting**
 
-📌 Problem Statement
+**📌 Problem Statement**
 
 A growing number of small retail shops submit transaction data daily for centralized analysis. 
 The business goal is to detect anomalies (e.g., abnormally high refunds), visualize performance trends in near real-time, 
 and make the processed data queryable historically - all without building heavy ETL infrastructure.
 
-Key constraints:
+**Key constraints:**
 - Data arrives frequently and needs to be ingested in real-time
 - The data is semi-structured (JSON)
 - Retention policy: 30 days
 - Need anomaly detection, dashboards, and ad hoc queries
 
 
-🧱Architecture Overview
+**🧭 Architecture Diagram**
 
 ![](https://github.com/DonnaDia/aws-data-solutions-architect-portfolio/blob/03ed509e47d82dad86664427637ecae15deb957f/Streaming%20Daily%20Sales%20Ingestion%20and%20Reporting.jpeg?raw=true)
 
-Flow
+
+**🧱Flow Architecture Overview**
 1. ***Shops*** send **JSON transactions** via **AWS API Gateway**
 2. Data flows through **Kinesis Firehose**, is monitored by **CloudWatch**, and lands in **S3 /raw**
 3. Two **Lambda functions** handle:
@@ -33,7 +34,7 @@ Flow
 
 
 
-Key Architectural Decisions & Tradeoffs
+**⚖️ Key Architectural Decisions & Tradeoffs**
 
 🔄 Streaming Method: **Kinesis Firehose** vs. **Kinesis Data Streams**
 
@@ -60,8 +61,7 @@ Key Architectural Decisions & Tradeoffs
 
 
 
-S3 Partitioning Structure
-
+**🗂️ S3 Partitioning Structure**
 ```
 s3://<your-bucket>/processed/
   shop_id=shop1/
@@ -76,8 +76,7 @@ s3://<your-bucket>/processed/
 
 
 
-Example Athena Query
-
+**🧑‍💻 Example Athena Query**
 ```sql
 SELECT shop_id, date, SUM(total_sales) as daily_sales
 FROM processed_table
@@ -88,7 +87,7 @@ ORDER BY date DESC;
 
 
 
-Design Highlights
+**✅ Design Highlights**
 
 * **Cost-aware**: S3-based storage with lifecycle rules; serverless compute
 * **Partitioned & Queryable**: Efficient queries using Athena + Glue Catalog
@@ -97,8 +96,7 @@ Design Highlights
 
 
 
-When to Use This Architecture
-
+**❓ When to Use This Architecture**
 This architecture suits:
 
 * Teams without a dedicated data engineering team
@@ -107,8 +105,7 @@ This architecture suits:
 
 
 
-Future Improvements (optional)
-
+**🏗️ Future Improvements**
 * Replace Lambda with AWS Glue ETL jobs for more complex transformations
 * Use Amazon QuickSight for lighter historical dashboards if OpenSearch is too costly
 * Integrate with Lake Formation for fine-grained data access controls
