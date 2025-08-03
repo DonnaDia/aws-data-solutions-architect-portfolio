@@ -1,4 +1,4 @@
-🧠 Case 1: Daily Sales Ingestion and Reporting
+🧠 Case 1: Batch Sales Ingestion and Reporting
 
 📌 Scenario
 
