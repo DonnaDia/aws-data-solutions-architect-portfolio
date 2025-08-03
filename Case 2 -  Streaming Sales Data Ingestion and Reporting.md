@@ -97,6 +97,7 @@ ORDER BY date DESC;
 
 
 **❓ When to Use This Architecture**
+
 This architecture suits:
 
 * Teams without a dedicated data engineering team
