@@ -15,7 +15,7 @@ Key constraints:
 
 🧱Architecture Overview
 
-(https://github.com/DonnaDia/aws-data-solutions-architect-portfolio/blob/03ed509e47d82dad86664427637ecae15deb957f/Streaming%20Daily%20Sales%20Ingestion%20and%20Reporting.jpeg?raw=true)
+![](https://github.com/DonnaDia/aws-data-solutions-architect-portfolio/blob/03ed509e47d82dad86664427637ecae15deb957f/Streaming%20Daily%20Sales%20Ingestion%20and%20Reporting.jpeg?raw=true)
 
 Flow
 1. ***Shops*** send **JSON transactions** via **AWS API Gateway**
