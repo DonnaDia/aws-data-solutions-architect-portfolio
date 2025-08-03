@@ -1,4 +1,4 @@
-**🧠 Case 2: Streaming Daily Sales Ingestion and Reporting**
+**🧠 Case 2: Streaming Sales Data Ingestion and Reporting**
 
 **📌 Problem Statement**
 
