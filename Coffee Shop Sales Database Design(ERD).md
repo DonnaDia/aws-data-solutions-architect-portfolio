@@ -1,4 +1,4 @@
-☕ Coffee Shop Sales Database Design
+☕ Coffee Shop Sales Database Design and ERD
 
 **Overview**
 
@@ -68,7 +68,7 @@ This design ensures data consistency, prevents redundancy, and enhances performa
 
 Below is the resulting Entity-Relationship Diagram (ERD) after normalization:
 
-
+![](https://github.com/DonnaDia/aws-data-solutions-architect-portfolio/blob/d857358ce417a81b3f8616bf4dfed77283f70960/cofee_shop_db.png?raw=true)
 
 **Skills Demonstrated**
 
